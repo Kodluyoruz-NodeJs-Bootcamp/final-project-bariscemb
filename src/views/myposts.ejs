@@ -1,0 +1,169 @@
+
+
+	<%- include('partials/_header') -%>
+
+
+	<body>
+	<!--preloading-->
+	<div id="preloader">
+		<img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw15vj8GtnDwrNlPYL13TxsxT1a4eRO82oSo2iXjl-bc-5DO5vSTliXaEW0ccgZBXYITg&usqp=CAU" alt="" width="119" height="58">
+		<div id="status">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	
+	</header>
+	<!-- END | Header -->
+	
+
+
+	<div class="slider movie-items">
+		<div class="container">
+			<div class="row">
+			
+
+				</div>
+				<% for (let i =0; i < movies.length; i++) { %>
+					<tr>
+						<div  class="slick-multiItemSlider">
+							<div class="movie-item">
+
+								<div class="mv-img">
+									<a href="#"><img src='<%= movies[i].photo %>' alt="" width="285" height="437"></a>
+								</div>
+								<div class="title-in">
+									<div class="cate">
+										
+									</div>
+									<h6><a href="#"><%= movies[i].title %></a></h6>
+								</div>
+							</div>
+
+
+							<div>
+								<div>
+									<h2>Description</h2>
+							<p><%= movies[i].description %></p>
+								<form method="POST"  action="/myposts/updatemovie/<%= movies[i].id %>">
+
+										<div class="share">
+											
+											<h4 class= "buster-light">SHARE?</h4>
+											<select name="shared">
+												<option value="false">No</option>
+												<option value="true">Yes</option>
+											</select>
+										</div>
+										<button class="yellowbtn" onclick="return confirm('ARE YOU SURE?')"
+										><span>UPDATE</span></button>
+									</form>	
+									
+								</div>
+
+									<form method="POST"  action=" /myposts/deletemovie/<%= movies[i].id %>">
+										<button class="redbtn" onclick="return confirm('ARE YOU SURE?')"
+										><span>DELETE</span></button>
+									</form>	
+
+									</div>
+							
+
+						
+
+						</div>
+						
+				
+			<% } %>
+			
+
+		
+		</div>
+	</div>
+</div>
+
+	<!--ACTORS-->
+
+	
+	<h6>ACTOR LIST</h6>
+
+
+	<div class="slider movie-items">
+		<div class="container">
+			<div class="row">
+			
+
+				</div>
+				<% for (let i =0; i < actors.length; i++) { %>
+						<div  class="slick-multiItemSlider">
+							<div class="movie-item">
+								<div class="mv-img">
+									<a href="#"><img src='<%= actors[i].photo %>' alt="" width="285" height="437"></a>
+								</div>
+								<div class="title-in">
+									<div class="cate">
+										
+									</div>
+									<h6><a href="#"><%= actors[i].name %></a></h6>
+								</div>
+
+							
+							</div>
+
+
+
+								<div>
+									<div>
+										<h2>BİOGRAPHY</h2>
+								<p><%= actors[i].biography %></p>
+									<form method="POST"  action="/myposts/updateactor/<%= actors[i].id %>">
+
+											<div class="share">
+												
+												<h4 class= "buster-light">SHARE?</h4>
+												<select name="shared">
+													<option value="false">No</option>
+													<option value="true">Yes</option>
+												</select>
+											</div>
+											<button class="yellowbtn" onclick="return confirm('ARE YOU SURE?')"
+											><span>UPDATE</span></button>
+										</form>	
+										
+									</div>
+
+										<form method="POST"  action=" /myposts/deleteactor/<%= actors[i].id %>">
+											<button class="redbtn" onclick="return confirm('ARE YOU SURE?')"
+											><span>DELETE</span></button>
+										</form>	
+
+										</div>
+								
+
+							
+
+							</div>
+							
+					
+				<% } %>
+				
+
+			
+			</div>
+		</div>
+	</div>
+
+
+	
+	<%- include('partials/_footer') -%>
+					   
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/plugins2.js"></script>
+	<script src="js/custom.js"></script>
+	</body>
+	
+	<!-- index14:58-->
+	</html>
+	

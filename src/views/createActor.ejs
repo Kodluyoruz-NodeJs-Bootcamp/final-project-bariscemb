@@ -1,0 +1,97 @@
+
+
+	<%- include('partials/_header') -%>
+
+
+    <body>
+    <!--preloading-->
+    <div id="preloader">
+        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw15vj8GtnDwrNlPYL13TxsxT1a4eRO82oSo2iXjl-bc-5DO5vSTliXaEW0ccgZBXYITg&usqp=CAU" alt="" width="119" height="58">
+        <div id="status">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+ 
+    
+    <!-- BEGIN | Header -->
+    
+            
+            <!-- top search form -->
+          
+    </header>
+    <!-- END | Header -->
+    
+    <div class="slider movie-items">
+        <div class="container">
+            <div class="row">
+        
+                </div>
+
+
+                <main>
+
+
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="form-style-1 user-pro" action="">
+
+                            <form id="movie-form" class="user"  method = "POST" action="/createActor">
+                                <h4>Add New Actor</h4>
+                    
+                                        <form method = "POST" action="/createActor" class="tm-contact-form">
+                                          <div class="form-group">
+                                            <input type="text" name="name" class="form-control rounded-0" placeholder="Actor Name" required>
+                                          </div>
+                                            
+                            
+                                          <div class="form-group">
+                                            <textarea rows="8" name="biography" class="form-control rounded-0" placeholder="Biography" required                                                  required></textarea>
+                                          </div>
+        
+                                          <div class="form-group">
+                                            <input type="text" name="photo" class="form-control rounded-0" placeholder="Actor Photo URL">
+                                          </div>
+        
+                                          <div class="share">
+                                            <div>
+                                                <input type="checkbox" name="shared" value="true"><span>Do you want to share it?</span>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                     
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <input class="submit" type="submit" value="submit">
+                                                </div>
+                                            </div>	
+                                           
+                                        </div>
+                                    </div>
+                                        </form>    
+                                    
+                                </div>
+                            </div>
+                                                                    			
+                        
+                </main>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('partials/_footer') -%>
+                       
+    <!-- end of footer section-->
+    
+   
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/plugins2.js"></script>
+    <script src="js/custom.js"></script>
+    </body>
+    
+    <!-- index14:58-->
+    </html>
+    
